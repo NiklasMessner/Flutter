@@ -10,7 +10,7 @@ Widget gridView() {
     padding: const EdgeInsets.all(4),
     mainAxisSpacing: 4,     //y-Axis
     crossAxisSpacing: 4,    //x-Axis
-    children: _buildGridList(25),
+    children: _buildGridList(25),   //Anzahl Darstellungen-Images
   );    
 }
 
