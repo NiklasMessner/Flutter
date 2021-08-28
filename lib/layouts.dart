@@ -8,15 +8,15 @@ Widget gridView() {
   return GridView.extent(
     maxCrossAxisExtent: 150, 
     padding: const EdgeInsets.all(4),
-    mainAxisSpacing: 4,
-    crossAxisSpacing: 4,
+    mainAxisSpacing: 4,     //y-Axis
+    crossAxisSpacing: 4,    //x-Axis
     children: _buildGridList(25),
   );    
 }
 
 List<Container>_buildGridList(int i) => List.generate(
     i, (index) => Container(
-      child: Image.network('https://picsum.photos/100/'),
+      child: Image.network('https://picsum.photos/150/'),
 )
 );
 
