@@ -103,6 +103,7 @@ class _SuperHeroName extends State<SuperHeroNameGenerator> {
             children: [
               Image.network('https://picsum.photos/100'),
               Image.network('https://picsum.photos/100'),
+              Image.network('https://picsum.photos/100'),
               Image.network('https://picsum.photos/100')
             ]
           ),
