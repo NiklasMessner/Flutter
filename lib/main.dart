@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //title
+      //title2
     title: 'My SuperHero Pickers',
       home: SuperHeroNameGenerator(),
     );
