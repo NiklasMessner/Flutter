@@ -1,3 +1,6 @@
+import 'package:demo_app/detailedSuperHeroInfo.dart';
+import 'package:demo_app/layouts.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:super_hero/super_hero.dart';
 
@@ -9,7 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //title
-      //title2
     title: 'My SuperHero Pickers',
       home: SuperHeroNameGenerator(),
     );
@@ -32,7 +34,7 @@ class _SuperHeroName extends State<SuperHeroNameGenerator> {
       appBar: AppBar(
         title: Text('Welcome to my SuperHero Picker'),
       ),
-      body: _buildBody(),
+      body: mainWidget(),//_buildBody(),
     );
   }
 
@@ -90,34 +92,7 @@ class _SuperHeroName extends State<SuperHeroNameGenerator> {
   void _pushExample(String superHeroName) {
     Navigator.of(context).push(
       MaterialPageRoute<void>(builder: (BuildContext context) {
-        final _superHeroName = superHeroName;
-        return Scaffold(
-            appBar: AppBar(
-              title: Text(_superHeroName),
-            ),
-          body: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image.network('https://picsum.photos/100'),
-              Image.network('https://picsum.photos/100'),
-              Image.network('https://picsum.photos/100'),
-              Image.network('https://picsum.photos/100')
-            ]
-          ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.network('https://picsum.photos/100'),
-                Image.network('https://picsum.photos/100'),
-                Image.network('https://picsum.photos/100')
-              ]
-          )
-          ]
-          ),
-        );
+        return superHeroDetails(superHeroName);
       }),
     );
   }
