@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 Widget mainWidget(){
   return gridView();
@@ -14,10 +15,30 @@ Widget gridView() {
   );    
 }
 
-List<Container>_buildGridList(int i) => List.generate(
-    i, (index) => Container(
-      child: Image.network('https://picsum.photos/150/'),
-)
+List<Widget>_buildGridList(int i) => List.generate(
+    i, (index) => Stack(
+  alignment: const Alignment(0, 0.8),
+    children: [
+      CircleAvatar(
+      backgroundImage: NetworkImage('https://picsum.photos/150/'),
+        radius: 150,
+      ),
+      Container (
+        padding: const EdgeInsets.all(4),
+        decoration: BoxDecoration(
+          color: Colors.black38,
+        ),
+          child:Text(
+          "Text",
+        style: TextStyle(
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+          color: Colors.white70
+        ),
+      )
+      )
+    ]
+    )
 );
 
 
